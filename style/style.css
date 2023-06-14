@@ -1,0 +1,50 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+}
+
+.card {
+    background-color: rgba(223, 230, 233,0.4);
+    margin-right: 10px;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+.card-img-top{
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInOut 1s infinite alternate;
+}
+@keyframes fadeInOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+    .card {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: calc(100% - 20px);
+    }
+}
+@media (min-width: 768px) and (max-width: 1040px) {
+    .cards{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: calc(50% - 20px);
+        margin-bottom: 10px;
+    }
+}
